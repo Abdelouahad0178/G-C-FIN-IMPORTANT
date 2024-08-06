@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion des Ventes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, button {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .item-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .item button {
+            background-color: #dc3545;
+            cursor: pointer;
+        }
+        .item button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/index.html">Retour</a>
+        <h1>Gestion des Ventes</h1>
+        <form id="saleForm">
+            <input type="hidden" id="saleId">
+            <input type="text" id="saleName" placeholder="Nom du produit" required>
+            <input type="number" id="saleQuantity" placeholder="Quantité" required>
+            <input type="number" id="salePrice" placeholder="Prix unitaire" required>
+            <button type="submit" id="submitBtn">Ajouter à la liste</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Quantité</th>
+                    <th>Prix</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="saleList"></tbody>
+        </table>
+    </div>
+    
+    
+    
+    <script src="./vente.js"></script>
+</body>
+</html>

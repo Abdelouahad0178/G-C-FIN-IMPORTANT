@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion Commerciale</title>
+    <link rel="stylesheet" href="/styleclient.css">
+</head>
+<body>
+    <a href="/index.html">Retour</a>
+    <h1>Gestion Commerciale</h1>
+    
+    <button id="showFormButton">Ajouter Client</button>
+
+    <section id="clientFormSection" style="display: none;">
+        <h2>Ajouter un Client</h2>
+        <form id="clientForm">
+            <label for="clientName">Nom:</label>
+            <input type="text" id="clientName" required><br>
+            
+            <label for="clientPhone">Téléphone:</label>
+            <input type="text" id="clientPhone" required><br>
+            
+            <label for="clientInvoiceNumber">N° de Facture:</label>
+            <input type="text" id="clientInvoiceNumber" required><br>
+            
+            <label for="clientInvoiceDate">Date de Facture:</label>
+            <input type="date" id="clientInvoiceDate" required><br>
+            
+            <label for="clientAmount">Montant Facture:</label>
+            <input type="number" id="clientAmount" required><br>
+            
+            <label for="clientPaymentAmount">Montant Réglé:</label>
+            <input type="number" id="clientPaymentAmount" required><br>
+            
+            <button type="submit">Ajouter Client</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Liste des Clients</h2>
+        <input type="text" id="searchBox" placeholder="Rechercher par nom">
+        <table id="clientsTable">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Téléphone</th>
+                    <th>N° de Facture</th>
+                    <th>Date de Facture</th>
+                    <th>Montant Facture</th>
+                    <th>Montant Réglé</th>
+                    <th>Solde Restant</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Les clients seront ajoutés ici dynamiquement -->
+            </tbody>
+        </table>
+        <p id="totalAmount" style="text-align: center; font-weight: bold; margin-top: 20px;"></p>
+        <p id="totalBalance" class="red-text" style="text-align: center; font-weight: bold; margin-top: 20px;"></p>
+    </section>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <p id="popupInvoiceNumber"></p>
+            <p id="popupAmount"></p>
+            <p id="popupPaymentAmount"></p>
+            <p id="popupBalance"></p>
+        </div>
+    </div>
+
+    <script src="/client.js"></script>
+</body>
+</html>

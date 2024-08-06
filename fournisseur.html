@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Fournisseurs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gestion des Fournisseurs</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="client.html">Clients</a></li>
+            <li><a href="fournisseur.html">Fournisseurs</a></li>
+            <li><a href="achat.html">Achats</a></li>
+            <li><a href="vente.html">Ventes</a></li>
+            <li><a href="stock.html">Stock</a></li>
+            <li><a href="facture.html">Factures</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="content">
+            <h2>Fournisseurs</h2>
+            <form id="fournisseurForm">
+                <input type="text" id="fournisseurName" placeholder="Nom du fournisseur" required>
+                <input type="email" id="fournisseurEmail" placeholder="Email du fournisseur" required>
+                <button type="submit">Ajouter Fournisseur</button>
+            </form>
+            <ul id="fournisseurList"></ul>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

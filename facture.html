@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Factures</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>Gestion des Factures</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="client.html">Clients</a></li>
+            <li><a href="fournisseur.html">Fournisseurs</a></li>
+            <li><a href="achat.html">Achats</a></li>
+            <li><a href="vente.html">Ventes</a></li>
+            <li><a href="stock.html">Stock</a></li>
+            <li><a href="facture.html">Factures</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="content">
+            <h2>Factures</h2>
+            <form id="factureForm">
+                <input type="text" id="factureClient" placeholder="Client" required>
+                <input type="text" id="factureProduit" placeholder="Produit" required>
+                <input type="number" id="factureQuantite" placeholder="Quantité" required>
+                <input type="number" id="facturePrix" placeholder="Prix unitaire" required>
+                <button type="submit">Générer Facture</button>
+            </form>
+            <div id="facturePDF"></div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
